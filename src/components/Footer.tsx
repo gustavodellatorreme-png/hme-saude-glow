@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Youtube } from "lucide-react";
+import logo from "@/assets/logo.png";
+import logoBranca from "@/assets/logo-branca.png";
 
 const Footer = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5518998080836?text=Olá! Gostaria de saber mais sobre os serviços da HME.", "_blank");
+    window.open("https://wa.me/5518997852512?text=Olá! Gostaria de saber mais sobre os serviços da HME.", "_blank");
   };
 
   return (
@@ -13,22 +15,32 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-bold text-xl">
-                HME
-              </div>
-              <div className="ml-3">
-                <div className="font-bold text-lg">HME Soluções e Saúde</div>
-                <div className="text-sm text-gray-300 font-telegraf">
-                  Fortalecendo instituições, transformando realidades
+              <a href="/" className="flex items-center">
+                {/* Logo sempre visível */}
+                <img
+                  src={logo}
+                  alt="HME Soluções e Saúde"
+                  className="h-10 w-auto"
+                />
+
+                {/* Separador vertical - somente em telas md+ */}
+                <div className="hidden md:block mx-3 h-8 border-l border-gray-300" />
+
+                {/* Texto ao lado da logo - somente em telas md+ */}
+                <div className="hidden md:block">
+                  <div className="font-bold text-lg text-foreground text-white">HME Soluções e Saúde</div>
+                  <div className="text-sm text-muted-foreground font-telegraf text-white">
+                    Fortalecendo instituições, transformando realidades
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Há mais de 15 anos oferecendo soluções especializadas em gestão pública, 
-              serviços médicos e apoio ao terceiro setor, sempre com foco na legalidade 
+              Há mais de 15 anos oferecendo soluções especializadas em gestão pública,
+              serviços médicos e apoio ao terceiro setor, sempre com foco na legalidade
               e nas pessoas.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center">
               <button
                 onClick={handleWhatsApp}
                 className="whatsapp-button px-4 py-2 rounded-lg text-sm font-medium"
@@ -36,13 +48,13 @@ const Footer = () => {
                 WhatsApp
               </button>
               <div className="flex gap-3">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://www.instagram.com/hmesolucoesesaude/" className="text-gray-400 hover:text-white transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Linkedin className="h-5 w-5" />
+                <a href="https://www.facebook.com/hmesolucoesesaude" className="text-gray-400 hover:text-white transition-colors">
+                  <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://www.youtube.com/channel/UCd-bmLoDXJdI6kjbaPvuTNg" className="text-gray-400 hover:text-white transition-colors">
                   <Youtube className="h-5 w-5" />
                 </a>
               </div>
@@ -101,8 +113,8 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-primary mt-0.5" />
                 <div>
-                  <a href="tel:+5518998080836" className="text-gray-300 hover:text-white transition-colors">
-                    (18) 99808-0836
+                  <a href="tel:+5518997852512" className="text-gray-300 hover:text-white transition-colors">
+                    (18) 99785-2512
                   </a>
                   <div className="text-sm text-gray-400 font-telegraf">
                     Segunda a sexta, das 8h às 18h
