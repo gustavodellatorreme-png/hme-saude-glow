@@ -15,9 +15,9 @@ import {
   TrendingUp,
   Shield
 } from "lucide-react";
-import heroCursos from "@/assets/hero-cursos.jpg";
-import aprisco from "@/assets/APRISCO-158.jpg";
-import heroHemodialise from "@/assets/hero-hemodialise.jpg";
+import heroCursos from "@/assets/hero-cursos.webp";
+import aprisco from "@/assets/aprisco.webp";
+import heroHemodialise from "@/assets/hero-hemodialise.webp";
 const Servicos = () => {
   const handleContactForm = () => {
     // Scroll to contact form or open contact page
@@ -147,22 +147,29 @@ const Servicos = () => {
 
               {/* Serviços Médicos */}
               <TabsContent value="medicos" id="medicos">
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                  <div>
-                    <h2 className="mb-6">Prestação de Serviços Médicos</h2>
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  {/* Texto principal */}
+                  <div className="self-center">
+                    <h2 className="mb-6">Serviços Médicos</h2>
                     <p className="text-lg mb-6">
-                      Oferecemos alocação e gestão de equipes médicas especializadas,
-                      garantindo cobertura completa, qualidade no atendimento e
-                      eficiência operacional.
+                      Oferecemos a alocação e gestão completa de equipes multiprofissionais
+                      para unidades de saúde, com médicos, enfermeiros, técnicos e especialistas
+                      contratados de forma legal e estratégica.
+                    </p>
+                    <p className="text-lg mb-6">
+                      Garantimos que cada território tenha acesso a profissionais qualificados,
+                      com foco na melhoria da assistência e na eficiência do serviço público
+                      de saúde.
                     </p>
 
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start gap-3">
                         <Users className="h-6 w-6 text-primary mt-0.5" />
                         <div>
-                          <h4 className="font-semibold mb-1">Equipes Multidisciplinares</h4>
+                          <h4 className="font-semibold mb-1">Gestão Completa</h4>
                           <p className="text-muted-foreground">
-                            Médicos, enfermeiros, técnicos, multiprofissionais e apoio administrativo
+                            Alocação de profissionais, contratos legais, escalas e gestão
+                            integrada das equipes de saúde.
                           </p>
                         </div>
                       </div>
@@ -170,21 +177,10 @@ const Servicos = () => {
                       <div className="flex items-start gap-3">
                         <Settings className="h-6 w-6 text-primary mt-0.5" />
                         <div>
-                          <h4 className="font-semibold mb-1">Gestão Completa</h4>
+                          <h4 className="font-semibold mb-1">Eficiência Operacional</h4>
                           <p className="text-muted-foreground">
-                            Cobertura de escalas, contratos, gestão de pessoas e
-                            controle de indicadores de qualidade
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-3">
-                        <Award className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Melhoria Contínua</h4>
-                          <p className="text-muted-foreground">
-                            Implementação de KPIs e processos de melhoria
-                            contínua da qualidade assistencial
+                            Foco na melhoria contínua da assistência e na sustentabilidade
+                            das instituições atendidas.
                           </p>
                         </div>
                       </div>
@@ -198,30 +194,36 @@ const Servicos = () => {
                   <div className="space-y-6">
                     <Card className="bg-primary/5 border-primary/20">
                       <CardContent className="p-6">
-                        <h3 className="text-primary mb-4">Case de Sucesso: Miracatu/SP</h3>
+                        <h3 className="text-primary mb-4">Clínicas de Hemodiálise</h3>
                         <p className="mb-4">
-                          "A HME transformou nosso atendimento médico. Com equipes
-                          especializadas e gestão eficiente, conseguimos melhorar
-                          significativamente a qualidade do atendimento à população."
+                          Implantamos clínicas desde a aprovação do projeto até a execução
+                          dos serviços: projeto técnico, estrutura física, equipamentos,
+                          equipe multidisciplinar, contratos, escalas, manutenção, regulação
+                          e gestão operacional.
                         </p>
-                        <div className="text-sm text-muted-foreground">
-                          - Secretaria Municipal de Saúde de Miracatu/SP
-                        </div>
+                        <p className="mb-4">
+                          Também oferecemos apoio técnico para clínicas já existentes —
+                          públicas, privadas ou filantrópicas — com soluções específicas
+                          para todas as áreas administrativas e assistenciais.
+                        </p>
                       </CardContent>
                     </Card>
 
                     <Card className="card-hover">
                       <CardContent className="p-6">
-                        <h3 className="mb-4">Especialidades Atendidas</h3>
-                        <div className="grid grid-cols-2 gap-2 text-sm">
-                          <div>• Clínica Médica</div>
-                          <div>• Pediatria</div>
-                          <div>• Ginecologia</div>
-                          <div>• Cardiologia</div>
-                          <div>• Ortopedia</div>
-                          <div>• Oftalmologia</div>
-                          <div>• Psiquiatria</div>
-                          <div>• Neurologia</div>
+                        <h3 className="mb-4">O impacto de uma gestão que transforma</h3>
+                        <p className="mb-4">
+                          A HME Soluções e Saúde existe para propor soluções simples e
+                          inovadoras para problemas complexos, com seriedade, competência
+                          técnica e sensibilidade social.
+                        </p>
+                        <p className="mb-4">
+                          Sempre guiada pelo compromisso com o bem comum e com a
+                          sustentabilidade das instituições que atende.
+                        </p>
+                        <div className="text-sm text-muted-foreground">
+                          Afinal, quando a gestão funciona, o cuidado chega onde mais
+                          importa: na vida das pessoas.
                         </div>
                       </CardContent>
                     </Card>
@@ -333,14 +335,11 @@ const Servicos = () => {
               para as necessidades específicas da sua instituição.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" onClick={handleContactForm}>
-                Solicitar Proposta
-              </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="bg-transparent border-white text-white hover:bg-white hover:text-primary"
-                onClick={() => window.open("https://wa.me/5518998080836?text=Olá! Gostaria de solicitar uma proposta para os serviços da HME.", "_blank")}
+                onClick={() => window.open("https://wa.me/5518997852512?text=Olá! Gostaria de solicitar uma proposta para os serviços da HME.", "_blank")}
               >
                 WhatsApp
               </Button>

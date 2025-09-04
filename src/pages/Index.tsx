@@ -37,10 +37,10 @@ import {
 } from "lucide-react";
 
 // Import hero images
-import heroServicos from "@/assets/hero-servicos-medicos.jpg";
-import heroCursos from "@/assets/hero-cursos.jpg";
-import heroHemodialise from "@/assets/hero-hemodialise.jpg";
-import heroCaptacao from "@/assets/hero-captacao.jpg";
+import heroServicos from "@/assets/hero-servicos-medicos.webp";
+import heroCursos from "@/assets/hero-cursos.webp";
+import heroHemodialise from "@/assets/hero-hemodialise.webp";
+import heroCaptacao from "@/assets/hero-captacao.webp";
 import staCasaMachado from "@/assets/sta-casa-machado.png";
 import staCasaVeceslau from "@/assets/sta-casa-venceslau.png";
 import staCasaMartinopolis from "@/assets/sta-casa-martinopolis.png";
@@ -48,8 +48,8 @@ import staCasaStoAmaro from "@/assets/sta-casa-sto-amaro.png";
 import ibcc from "@/assets/ibcc.png";
 import prefeituraMiracatu from "@/assets/prefeitura-miracatu.png";
 import hmRioBrilhante from "@/assets/hm-rio-brilhante.png";
-import diocesePrudente from "@/assets/diocese-prudente.png";
-import whatsapp from "@/assets/whatsapp.png";
+import diocesePrudente from "@/assets/diocese-prudente.webp";
+import whatsapp from "@/assets/whatsapp.webp";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
