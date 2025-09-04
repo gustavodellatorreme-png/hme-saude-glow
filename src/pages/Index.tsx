@@ -61,6 +61,7 @@ const Index = () => {
     consent: false
   });
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const clients = [
     {
@@ -164,34 +165,7 @@ const Index = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Formulário submetido"); // ✅ Ver se aparece no console
 
-    if (!formData.consent) {
-      toast({
-        title: "Consentimento necessário",
-        description: "É necessário aceitar os termos de privacidade.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    await fetch("https://script.google.com/macros/s/AKfycbziZS0zDF2s581wlAksZAT23CkbGRdZuwtATnnrTp8kx9PNx0TUMyJbhA6sIHSjd679/exec", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-
-    toast({
-      title: "Contato enviado!",
-      description: "Nossa equipe entrará em contato em breve.",
-    });
-
-    setFormData({ name: "", email: "", phone: "", message: "", consent: false });
-  };
 
   const handleWhatsApp = () => {
     window.open("https://wa.me/5518997852512?text=Olá! Gostaria de saber mais sobre os serviços da HME.", "_blank");
@@ -650,11 +624,11 @@ const Index = () => {
                           <h3 className="font-semibold mb-2">Filial Roraima</h3>
                           <p className="text-muted-foreground mb-3">
                             Av. Ville Roy, 5618, Sala 15<br />
-                            Rorainópolis/RR - CEP: 69301-000
+                            Boa Vista/RR - CEP: 69301-000
                           </p>
                           <Button size="sm" variant="outline" asChild>
                             <a
-                              href="https://maps.google.com/?q=Av+Ville+Roy,+5618,+Rorainópolis"
+                              href="https://maps.google.com/?q=Av+Ville+Roy,+5618,+Boa+Vista"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -697,17 +671,33 @@ const Index = () => {
               <div>
                 <h2 className="mb-8">Fale conosco:</h2>
 
-                {/* Contact Form */}
                 <Card>
                   <CardContent className="p-9">
-                    <form className="space-y-4" onSubmit={handleFormSubmit}>
+                    <form
+                      className="space-y-4"
+                      action="https://script.google.com/macros/s/AKfycbziZS0zDF2s581wlAksZAT23CkbGRdZuwtATnnrTp8kx9PNx0TUMyJbhA6sIHSjd679/exec"
+                      method="POST"
+                      target="invisible_iframe"
+                      onSubmit={(e) => {
+                        if (!formData.consent) {
+                          e.preventDefault();
+                          toast({
+                            title: "Consentimento necessário",
+                            description: "Por favor, autorize o uso dos seus dados para prosseguir.",
+                            variant: "destructive",
+                          });
+                          return;
+                        }
+                        setIsSubmitting(true); // marca como enviando
+                      }}>
                       <div>
                         <Label htmlFor="name">Nome *</Label>
                         <Input
                           id="name"
+                          name="name"
+                          required
                           value={formData.name}
                           onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                          required
                         />
                       </div>
 
@@ -716,9 +706,10 @@ const Index = () => {
                         <Input
                           id="email"
                           type="email"
+                          name="email"
+                          required
                           value={formData.email}
                           onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                          required
                         />
                       </div>
 
@@ -727,9 +718,10 @@ const Index = () => {
                         <Input
                           id="phone"
                           type="tel"
+                          name="phone"
+                          required
                           value={formData.phone}
                           onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                          required
                         />
                       </div>
 
@@ -737,16 +729,18 @@ const Index = () => {
                         <Label htmlFor="message">Mensagem</Label>
                         <Textarea
                           id="message"
-                          value={formData.message}
-                          onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                          name="message"
                           rows={10}
                           placeholder="Como podemos ajudar?"
+                          value={formData.message}
+                          onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                         />
                       </div>
 
                       <div className="flex items-start space-x-2">
                         <Checkbox
                           id="consent"
+                          name="consent"
                           checked={formData.consent}
                           onCheckedChange={(checked) => setFormData(prev => ({ ...prev, consent: !!checked }))}
                         />
@@ -755,12 +749,30 @@ const Index = () => {
                         </Label>
                       </div>
 
-                      <Button type="submit" size="lg" className="w-full ">
-                        Enviar Contato
+                      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                        {isSubmitting ? "Enviando..." : "Enviar Contato"}
                       </Button>
                     </form>
                   </CardContent>
                 </Card>
+
+                {/* Invisible iframe to prevent page reload */}
+                <iframe
+                  name="invisible_iframe"
+                  style={{ display: "none" }}
+                  onLoad={() => {
+                    if (formData.name || formData.email || formData.phone || formData.message) {
+                      toast({
+                        title: "Contato enviado!",
+                        description: "Nossa equipe entrará em contato em breve.",
+                      });
+                      setFormData({ name: "", email: "", phone: "", message: "", consent: false });
+                      setIsSubmitting(false); // volta ao estado normal
+
+                    }
+                  }}
+                />
+
               </div>
             </div>
           </div>

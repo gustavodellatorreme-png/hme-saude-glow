@@ -146,7 +146,7 @@ const Footer = () => {
                 <div className="font-medium">Filial Roraima</div>
                 <div className="text-sm text-gray-300">
                   Av. Ville Roy, 5618, Sala 15<br />
-                  Rorainópolis/RR<br />
+                  Boa Vista/RR<br />
                   CEP: 69301-000
                 </div>
               </div>

@@ -12,15 +12,15 @@ const FAQ = () => {
       items: [
         {
           question: "Há quanto tempo a HME atua no mercado?",
-          answer: "A HME Soluções e Saúde atua há mais de 15 anos no mercado, oferecendo soluções especializadas em gestão pública, serviços médicos e apoio ao terceiro setor."
+          answer: "A HME Soluções e Saúde atua há mais de 15 anos no mercado, oferecendo soluções especializadas em captação de recursos, serviços médicos, clínicas de hemodiálise, capacitações e apoio ao terceiro setor."
         },
         {
           question: "Em quais regiões a HME possui atuação?",
-          answer: "Atuamos em todo o território nacional, com sede em Presidente Prudente/SP e filiais em Rorainópolis/RR e Rosana/SP. Nossa equipe está preparada para atender clientes em qualquer região do Brasil."
+          answer: "Atuamos em todo o território nacional, com sede em Presidente Prudente/SP e filiais em Boa Vista/RR e Rosana/SP. Nossa equipe está preparada para atender clientes em qualquer região do Brasil."
         },
         {
           question: "Quais são os diferenciais da HME?",
-          answer: "Nossos principais diferenciais são: mais de 15 anos de experiência, foco na legalidade e compliance, equipe especializada, resultados comprovados e atendimento personalizado para cada cliente."
+          answer: "Nossos principais diferenciais são: mais de 15 anos de experiência, foco na legalidade, equipe especializada com excelência em gestão, diversas instituições transformadas e atendimento personalizado para cada cliente."
         }
       ]
     },
@@ -29,11 +29,11 @@ const FAQ = () => {
       items: [
         {
           question: "Como funciona o processo de captação de recursos federais?",
-          answer: "Nosso processo inclui: diagnóstico institucional, reorganização administrativa (quando necessário), elaboração e submissão de projetos, acompanhamento da execução e prestação de contas técnica e financeira."
+          answer: "Nosso processo inclui: diagnóstico institucional, reorganização administrativa (quando necessário), elaboração e submissão de projetos por meio da plataforma Transfere gov.br, acompanhamento da execução e prestação de contas técnica e financeira."
         },
         {
           question: "Quais tipos de recursos podem ser captados?",
-          answer: "Trabalhamos com diversos tipos de recursos federais para saúde, educação, assistência social, infraestrutura e desenvolvimento urbano, através de emendas parlamentares, editais e convênios."
+          answer: "Trabalhamos com diversos tipos de recursos federais para saúde, educação, assistência social e infraestrutura, através de emendas parlamentares, editais e convênios."
         },
         {
           question: "Qual é o prazo médio para aprovação de um projeto?",
@@ -49,8 +49,8 @@ const FAQ = () => {
       title: "Serviços Médicos",
       items: [
         {
-          question: "Quais especialidades médicas a HME fornece?",
-          answer: "Fornecemos profissionais de diversas especialidades: clínica médica, pediatria, ginecologia, cardiologia, ortopedia, oftalmologia, psiquiatria, neurologia, entre outras."
+          question: "Quais serviços médicos a HME oferece?",
+          answer: "Fornecemos equipes multidisciplinares completas e treinadas como: médicos de diversas especialidades, enfermeiros, técnicos de enfermagem, fisioterapeutas, nutricionistas e outros profissionais de saúde conforme a necessidade da unidade de saúde."
         },
         {
           question: "Como é feita a seleção dos profissionais?",
@@ -67,15 +67,15 @@ const FAQ = () => {
       items: [
         {
           question: "A HME desenvolve projetos completos de hemodiálise?",
-          answer: "Sim, oferecemos soluções completas desde o projeto técnico e arquitetônico até a operação da clínica, incluindo adequações às normas da ANVISA e Ministério da Saúde."
+          answer: "Sim, oferecemos soluções completas desde o projeto técnico e arquitetônico até a operação da clínica, incluindo adequações às normas da ANVISA e Ministério da Saúde, aquisição de equipamentos, processos jurídicos e administrativos, gestão de pessoas e treinamento de equipe."
         },
         {
           question: "Vocês trabalham com clínicas já existentes?",
-          answer: "Sim, também oferecemos consultoria para clínicas já em funcionamento, auxiliando na otimização de processos, adequação de normas e melhoria de indicadores."
+          answer: "Sim, também oferecemos consultoria para clínicas já em funcionamento, auxiliando na otimização de processos específicos, adequação de normas e melhoria de indicadores."
         },
         {
-          question: "Qual o prazo para implantação de uma clínica?",
-          answer: "O prazo varia conforme a complexidade do projeto, mas em média leva de 12 a 18 meses, incluindo licenciamento, obras, instalação de equipamentos e treinamento de equipe."
+          question: "A HME tem clínica própria?",
+          answer: "Sim, possuímos dois centros de nefrologia próprios, localizados em Primavera/SP no distrito de Rosana e em Boa Vista/RR, que servem como referência em cuidado e tratamento para a comunidade local."
         }
       ]
     },
@@ -91,8 +91,8 @@ const FAQ = () => {
           answer: "Sim, organizamos turmas exclusivas para instituições que desejam capacitar sua equipe de forma personalizada, com conteúdo adaptado às suas necessidades específicas."
         },
         {
-          question: "Os cursos fornecem certificado?",
-          answer: "Sim, todos os nossos cursos fornecem certificado de conclusão, reconhecido no mercado e que comprova a capacitação do profissional."
+          question: "Quem pode participar do curso?",
+          answer: "Nossos cursos são voltados para profissionais de saúde, gestores de instituições de saúde públicas, privadas e filantrópicas, equipes técnicss e demais interessados em aprimorar seus conhecimentos na área de saúde e gestão."
         }
       ]
     },
@@ -104,25 +104,25 @@ const FAQ = () => {
           answer: "Você pode solicitar uma proposta através do nosso site, WhatsApp, e-mail ou telefone. Nossa equipe entrará em contato em até 24 horas para entender suas necessidades."
         },
         {
-          question: "As consultorias são cobradas?",
-          answer: "A primeira consulta é gratuita. Após analisarmos suas necessidades, apresentamos uma proposta personalizada com valores e condições."
+          question: "A proposta é personalizada para cada instituição?",
+          answer: "Sim. Cada proposta da HME é elaborada de forma personalizada, considerando o porte da instituição, suas necessidades específicas e os objetivos estratégicos que deseja alcançar."
         },
         {
-          question: "Qual o prazo para receber uma proposta?",
-          answer: "Normalmente enviamos propostas em até 5 dias úteis após a primeira reunião, dependendo da complexidade do projeto solicitado."
+          question: "Como é realizado uma visita técnica ou diagnóstico da instituição?",
+          answer: "Realizamos visitas técnicas presenciais ou virtuais, dependendo da localização e disponibilidade. Durante a visita, nossa equipe avalia as necessidades, infraestrutura e processos da instituição para oferecer a melhor solução."
         }
       ]
     }
   ];
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5518998080836?text=Olá! Tenho uma dúvida que não encontrei no FAQ.", "_blank");
+    window.open("https://wa.me/5518997852512?text=Olá! Tenho uma dúvida que não encontrei no FAQ.", "_blank");
   };
 
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="hero-overlay text-white section-padding">
@@ -131,7 +131,7 @@ const FAQ = () => {
               Dúvidas Frequentes
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto animate-slide-up">
-              Encontre respostas para as principais questões sobre nossos serviços
+              Encontre respostas para as principais questões sobre nossos serviços.
             </p>
           </div>
         </section>
@@ -143,11 +143,11 @@ const FAQ = () => {
               {faqCategories.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="mb-12">
                   <h2 className="mb-6 text-primary">{category.title}</h2>
-                  
+
                   <Accordion type="single" collapsible className="space-y-4">
                     {category.items.map((item, itemIndex) => (
-                      <AccordionItem 
-                        key={`${categoryIndex}-${itemIndex}`} 
+                      <AccordionItem
+                        key={`${categoryIndex}-${itemIndex}`}
                         value={`${categoryIndex}-${itemIndex}`}
                       >
                         <Card className="card-hover">
@@ -176,15 +176,12 @@ const FAQ = () => {
               <MessageCircle className="h-16 w-16 text-primary mx-auto mb-6" />
               <h2 className="mb-4">Não encontrou sua resposta?</h2>
               <p className="text-muted-foreground mb-8">
-                Nossa equipe está pronta para esclarecer qualquer dúvida específica 
+                Nossa equipe está pronta para esclarecer qualquer dúvida específica
                 sobre nossos serviços. Entre em contato conosco!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" onClick={handleWhatsApp} className="whatsapp-button">
                   WhatsApp
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href="/fale-conosco">Fale Conosco</a>
                 </Button>
               </div>
             </Card>

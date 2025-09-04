@@ -3,19 +3,21 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { 
-  FileText, 
-  Users, 
-  Building, 
-  CheckCircle, 
-  Target, 
-  Heart, 
+import {
+  FileText,
+  Users,
+  Building,
+  CheckCircle,
+  Target,
+  Heart,
   Settings,
   Award,
   TrendingUp,
   Shield
 } from "lucide-react";
-
+import heroCursos from "@/assets/hero-cursos.jpg";
+import aprisco from "@/assets/APRISCO-158.jpg";
+import heroHemodialise from "@/assets/hero-hemodialise.jpg";
 const Servicos = () => {
   const handleContactForm = () => {
     // Scroll to contact form or open contact page
@@ -25,7 +27,7 @@ const Servicos = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="hero-overlay text-white section-padding">
@@ -34,7 +36,7 @@ const Servicos = () => {
               Soluções Especializadas para Sua Instituição
             </h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto animate-slide-up">
-              Oferecemos três grandes frentes de atuação com foco na excelência, 
+              Oferecemos três grandes frentes de atuação com foco na excelência,
               legalidade e resultados sustentáveis
             </p>
           </div>
@@ -76,111 +78,69 @@ const Servicos = () => {
 
               {/* Captação de Recursos */}
               <TabsContent value="captacao" id="captacao">
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                  <div>
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  {/* Texto principal */}
+                  <div className="self-center">
                     <h2 className="mb-6">Captação de Recursos Federais</h2>
                     <p className="text-lg mb-6">
-                      Oferecemos soluções completas para captação de recursos federais, 
-                      desde o diagnóstico institucional até a prestação de contas, 
-                      garantindo total compliance e maximização dos resultados.
+                      A HME é referência nacional na assessoria técnica para captação de recursos da União,
+                      com foco em prefeituras, organizações religiosas e entidades do terceiro setor.
                     </p>
-                    
+                    <p className="text-lg mb-6">
+                      Nosso trabalho começa com um diagnóstico completo da instituição, seguido de orientação
+                      para reorganização administrativa, jurídica e assistencial, com o objetivo de torná-la
+                      apta a operar com recursos públicos via a plataforma <strong>Transfere Gov</strong>.
+                    </p>
+                    <p className="text-lg mb-6">
+                      Cuidamos de todo o processo:
+                    </p>
+
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Diagnóstico Institucional</h4>
-                          <p className="text-muted-foreground">
-                            Análise completa da estrutura organizacional e identificação 
-                            de oportunidades de captação
-                          </p>
-                        </div>
+                        <span>Estruturação institucional e documentação</span>
                       </div>
-                      
                       <div className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Reorganização Administrativa</h4>
-                          <p className="text-muted-foreground">
-                            Adequação jurídica, administrativa e assistencial para 
-                            atender aos requisitos dos editais
-                          </p>
-                        </div>
+                        <span>Elaboração de projetos conforme as diretrizes legais</span>
                       </div>
-                      
                       <div className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Elaboração e Submissão</h4>
-                          <p className="text-muted-foreground">
-                            Desenvolvimento completo de projetos e submissão 
-                            nas plataformas governamentais
-                          </p>
-                        </div>
+                        <span>Submissão de propostas em sistemas oficiais</span>
                       </div>
-                      
                       <div className="flex items-start gap-3">
                         <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Execução e Prestação de Contas</h4>
-                          <p className="text-muted-foreground">
-                            Acompanhamento da execução e elaboração de 
-                            prestações de contas técnica e financeira
-                          </p>
-                        </div>
+                        <span>Acompanhamento técnico e correção de pendências</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
+                        <span>Prestação de contas qualificada e monitoramento da execução</span>
                       </div>
                     </div>
+
+                    <p className="text-lg mb-6">
+                      Esse serviço é fundamental para instituições que desejam ampliar sua capacidade de ação
+                      e garantir recursos de forma contínua, legal e transparente.
+                    </p>
 
                     <Button size="lg" onClick={handleContactForm}>
                       Solicitar Proposta
                     </Button>
                   </div>
 
+                  {/* Imagens ilustrativas */}
                   <div className="space-y-6">
-                    <Card className="card-hover">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center">
-                            <FileText className="h-6 w-6 text-primary" />
-                          </div>
-                          <h3>Plano Diretor Municipal</h3>
-                        </div>
-                        <p className="text-muted-foreground">
-                          Assessoramento na elaboração de Planos Diretores Municipais 
-                          e reorganização administrativa em OSCs
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <img
+                      src={heroCursos}
+                      alt="Diagnóstico institucional"
+                      className="rounded-xl shadow-md"
+                    />
+                    <img
+                      src={aprisco}
+                      alt="Elaboração de projetos"
+                      className="rounded-xl shadow-md"
+                    />
 
-                    <Card className="card-hover">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center">
-                            <TrendingUp className="h-6 w-6 text-primary" />
-                          </div>
-                          <h3>Resultados Comprovados</h3>
-                        </div>
-                        <p className="text-muted-foreground">
-                          Mais de R$ 100 milhões em recursos captados para 
-                          instituições em todo o Brasil
-                        </p>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="card-hover">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center">
-                            <Shield className="h-6 w-6 text-primary" />
-                          </div>
-                          <h3>Compliance Total</h3>
-                        </div>
-                        <p className="text-muted-foreground">
-                          Todos os processos seguem rigorosamente as normas 
-                          e regulamentações dos órgãos competentes
-                        </p>
-                      </CardContent>
-                    </Card>
                   </div>
                 </div>
               </TabsContent>
@@ -191,11 +151,11 @@ const Servicos = () => {
                   <div>
                     <h2 className="mb-6">Prestação de Serviços Médicos</h2>
                     <p className="text-lg mb-6">
-                      Oferecemos alocação e gestão de equipes médicas especializadas, 
-                      garantindo cobertura completa, qualidade no atendimento e 
+                      Oferecemos alocação e gestão de equipes médicas especializadas,
+                      garantindo cobertura completa, qualidade no atendimento e
                       eficiência operacional.
                     </p>
-                    
+
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start gap-3">
                         <Users className="h-6 w-6 text-primary mt-0.5" />
@@ -206,24 +166,24 @@ const Servicos = () => {
                           </p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-start gap-3">
                         <Settings className="h-6 w-6 text-primary mt-0.5" />
                         <div>
                           <h4 className="font-semibold mb-1">Gestão Completa</h4>
                           <p className="text-muted-foreground">
-                            Cobertura de escalas, contratos, gestão de pessoas e 
+                            Cobertura de escalas, contratos, gestão de pessoas e
                             controle de indicadores de qualidade
                           </p>
                         </div>
                       </div>
-                      
+
                       <div className="flex items-start gap-3">
                         <Award className="h-6 w-6 text-primary mt-0.5" />
                         <div>
                           <h4 className="font-semibold mb-1">Melhoria Contínua</h4>
                           <p className="text-muted-foreground">
-                            Implementação de KPIs e processos de melhoria 
+                            Implementação de KPIs e processos de melhoria
                             contínua da qualidade assistencial
                           </p>
                         </div>
@@ -240,8 +200,8 @@ const Servicos = () => {
                       <CardContent className="p-6">
                         <h3 className="text-primary mb-4">Case de Sucesso: Miracatu/SP</h3>
                         <p className="mb-4">
-                          "A HME transformou nosso atendimento médico. Com equipes 
-                          especializadas e gestão eficiente, conseguimos melhorar 
+                          "A HME transformou nosso atendimento médico. Com equipes
+                          especializadas e gestão eficiente, conseguimos melhorar
                           significativamente a qualidade do atendimento à população."
                         </p>
                         <div className="text-sm text-muted-foreground">
@@ -271,64 +231,65 @@ const Servicos = () => {
 
               {/* Hemodiálise */}
               <TabsContent value="hemodialise" id="hemodialise">
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                  <div>
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  {/* Texto principal */}
+                  <div className="self-center">
                     <h2 className="mb-6">Implantação e Gestão de Clínicas de Hemodiálise</h2>
                     <p className="text-lg mb-6">
-                      Soluções completas para implantação e gestão de clínicas de hemodiálise, 
-                      desde o projeto técnico até a operação, com total conformidade às 
-                      normas da ANVISA e Ministério da Saúde.
+                      A HME oferece soluções completas para a implantação de clínicas de hemodiálise,
+                      atuando desde a concepção até a operação plena do serviço.
                     </p>
-                    
+
+                    <p className="text-lg mb-6">Assumimos todas as etapas do processo:</p>
+
                     <div className="space-y-4 mb-8">
                       <div className="flex items-start gap-3">
-                        <Building className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Projeto Técnico e Arquitetônico</h4>
-                          <p className="text-muted-foreground">
-                            Desenvolvimento completo do projeto conforme normas técnicas
-                          </p>
-                        </div>
+                        <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
+                        <span>Elaboração de projeto técnico e arquitetônico</span>
                       </div>
-                      
                       <div className="flex items-start gap-3">
-                        <Shield className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Adequações ANVISA/MS</h4>
-                          <p className="text-muted-foreground">
-                            Conformidade total com regulamentações sanitárias
-                          </p>
-                        </div>
+                        <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
+                        <span>Adequação física do espaço segundo normas da Anvisa e do Ministério da Saúde</span>
                       </div>
-                      
                       <div className="flex items-start gap-3">
-                        <Settings className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Equipamentos e Tecnologia</h4>
-                          <p className="text-muted-foreground">
-                            Seleção e instalação de equipamentos de última geração
-                          </p>
-                        </div>
+                        <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
+                        <span>Aquisição de equipamentos e insumos</span>
                       </div>
-                      
                       <div className="flex items-start gap-3">
-                        <Users className="h-6 w-6 text-primary mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold mb-1">Equipe Especializada</h4>
-                          <p className="text-muted-foreground">
-                            Formação e gestão de equipe multidisciplinar em nefrologia
-                          </p>
-                        </div>
+                        <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
+                        <span>Contratação e formação da equipe multidisciplinar</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
+                        <span>Gestão clínica, operacional e administrativa contínua</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-6 w-6 text-primary mt-0.5" />
+                        <span>Regulação de pacientes, escalas, contratos e indicadores de qualidade</span>
                       </div>
                     </div>
+
+                    <p className="text-lg mb-6">
+                      Além disso, também prestamos consultoria para clínicas já existentes: públicas, privadas ou filantrópicas,
+                      oferecendo apoio técnico especializado em todas as frentes operacionais e administrativas, promovendo
+                      mais eficiência, regularidade e segurança assistencial.
+                    </p>
 
                     <Button size="lg" onClick={handleContactForm}>
                       Solicitar Proposta
                     </Button>
                   </div>
 
+
                   <div className="space-y-6">
                     <Card className="card-hover">
+                      <div className="space-y-6">
+                        <img
+                          src={heroHemodialise}
+                          alt="Diagnóstico institucional"
+                          className="rounded-xl shadow-md"
+                        />
+                      </div>
                       <CardContent className="p-6">
                         <h3 className="mb-4">Serviços Completos</h3>
                         <ul className="space-y-2 text-sm">
@@ -356,43 +317,28 @@ const Servicos = () => {
                       </CardContent>
                     </Card>
 
-                    <Card className="card-hover">
-                      <CardContent className="p-6">
-                        <h3 className="mb-4">Consultoria para Clínicas Existentes</h3>
-                        <p className="text-muted-foreground mb-4">
-                          Também oferecemos consultoria especializada para clínicas 
-                          já em funcionamento (públicas, privadas ou filantrópicas):
-                        </p>
-                        <ul className="space-y-1 text-sm">
-                          <li>• Otimização de processos</li>
-                          <li>• Adequação de normas</li>
-                          <li>• Melhoria de indicadores</li>
-                          <li>• Capacitação de equipes</li>
-                        </ul>
-                      </CardContent>
-                    </Card>
                   </div>
                 </div>
               </TabsContent>
             </Tabs>
-          </div>
-        </section>
+          </div >
+        </section >
 
         {/* CTA Section */}
-        <section className="section-padding gradient-primary text-white">
+        <section className="section-padding gradient-primary text-white" >
           <div className="container text-center">
             <h2 className="mb-4">Precisa de uma solução personalizada?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Nossa equipe está pronta para desenvolver a solução ideal 
+              Nossa equipe está pronta para desenvolver a solução ideal
               para as necessidades específicas da sua instituição.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" onClick={handleContactForm}>
                 Solicitar Proposta
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="bg-transparent border-white text-white hover:bg-white hover:text-primary"
                 onClick={() => window.open("https://wa.me/5518998080836?text=Olá! Gostaria de solicitar uma proposta para os serviços da HME.", "_blank")}
               >
@@ -400,11 +346,11 @@ const Servicos = () => {
               </Button>
             </div>
           </div>
-        </section>
-      </main>
+        </section >
+      </main >
 
       <Footer />
-    </div>
+    </div >
   );
 };
 
